@@ -1,0 +1,329 @@
+/* Variables CSS para reutilizar colores y fuentes */
+:root {
+  --color-fondo: #f1f3f6;
+  --color-borde: #ccc;
+  --color-texto: #333;
+  --color-principal: #167bd3;
+  --fuente-base: Arial, sans-serif;
+}
+
+/* Estilos base para el body */
+body {
+  margin: 0;
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Envoltura principal para centrar contenido */
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 0 100px; /* espacio arriba y abajo */
+}
+
+/* Contenedor blanco principal */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  min-height: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Contenido interior centrado */
+.inner-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+/* Logo de Aventones */
+.logo {
+  display: block;
+  margin: 0 auto 15px;
+  width: 450px;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: #f1f1f1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+/* Contenedor de enlaces */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* Enlaces de navegación */
+.nav-links a {
+  padding: 0 30px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Estilo del enlace activo */
+.nav-links a.active {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+/* Lado derecho del navbar (search + usuario) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+/* Caja de búsqueda */
+.search-bar {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 200px;
+}
+
+/* Icono de usuario */
+.user-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Contenedor de menú de usuario */
+.user-dropdown {
+  position: relative;
+}
+
+/* Oculta checkbox de control de menú */
+.toggle-menu {
+  display: none;
+}
+
+/* Menú desplegable oculto por defecto */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #f1f1f1;
+  border: 1px solid var(--color-texto);
+  width: 120px;
+  z-index: 10;
+  font-size: 14px;
+}
+
+/* Estilo de cada opción del menú */
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* Quitar línea inferior al último */
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* Mostrar el menú si el checkbox está marcado */
+#user-toggle:checked + label + .dropdown-menu {
+  display: block;
+}
+
+/* Título de la página */
+.title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  color: #5e5858;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+/* Línea decorativa debajo del título */
+.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px;
+  width: 200px;
+  background-color: var(--color-borde);
+}
+
+/* Estilo del pie de página */
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid var(--color-borde);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+/* Enlaces del pie */
+.footer-links {
+  margin-bottom: 10px;
+}
+
+/* Estilos de enlaces en el pie */
+.footer-links a {
+  margin: 0 8px;
+  color: var(--color-texto);
+  text-decoration: none;
+  position: relative;
+}
+
+/* Separador entre enlaces */
+.footer-links a::after {
+  content: "|";
+  margin-left: 8px;
+  color: #999;
+}
+
+/* Elimina separador al final */
+.footer-links a:last-child::after {
+  content: "";
+}
+
+/* Formulario principal */
+.ride-form {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+/* Fila de formulario (agrupación horizontal) */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Grupo de formulario individual */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Etiquetas de campos */
+.form-group label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Inputs y selects generales */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 14px 10px;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Grupo de checkboxes para los días */
+.checkbox-group {
+  display: flex;
+  gap: 45px;
+  margin: 19px 0 25px;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+/* Sección del vehículo */
+.vehicle-section {
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+/* Título de la sección del vehículo */
+.vehicle-section legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Botones al final del formulario */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo del enlace Cancel */
+.cancel-link {
+  color: var(--color-principal);
+  text-decoration: underline;
+  font-size: 20px;
+  /* Puedes agregar una línea visual debajo si deseas simular el subrayado como en el título:
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 2px; */
+}
+
+/* Botón Save estilizado */
+.create-button {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 14px 40px; /* Botón más grande */
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Estilo para inputs de hora, seats y fee */
+.form-row.time-seats-fee .form-group {
+  max-width: 130px;
+  min-width: 100px;
+  flex: none;
+}
+
+/* Fila específica para tiempo, asientos y tarifa */
+.form-row.time-seats-fee {
+  gap: 160px;
+  justify-content: flex-start;
+}

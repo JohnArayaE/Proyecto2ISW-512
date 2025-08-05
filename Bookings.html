@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Bookings</title>
+  <!-- Enlace al archivo CSS de estilos -->
+  <link rel="stylesheet" href="css/estiloBookings.css" />
+</head>
+<body>
+  <!-- Contenedor principal -->
+  <div class="page-wrapper">
+    <main class="container">
+      <section class="inner-content">
+        <!-- Logo superior -->
+        <header>
+          <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+          <div class="nav-links">
+            <!-- Navegación principal -->
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html" class="active">Bookings</a>
+          </div>
+
+          <!-- Búsqueda e ícono de usuario -->
+          <div class="nav-right">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <!-- Ícono que activa menú -->
+              <label for="user-toggle" class="user-icon-label">
+                <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
+              </label>
+              <input type="checkbox" id="user-toggle" class="toggle-menu" />
+              <!-- Menú desplegable del usuario -->
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Configuration.html">Configuration</a>
+                <a href="EditProfile.html">Profile</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Título de sección -->
+        <h2 class="title">Bookings</h2>
+
+        <!-- Tabla de reservaciones -->
+        <table class="rides-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Ride</th>
+              <th>Accept / Reject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="img/icon-user.png" alt="User Icon" class="table-icon">
+                <strong>fulano</strong>
+              </td>
+              <td>Ciudad Quesada - Naranjo</td>
+              <td>
+                <a href="RideDetails.html">Accept</a> |
+                <a href="#">Reject</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/icon-user.png" alt="User Icon" class="table-icon">
+                <strong>yluna</strong>
+              </td>
+              <td>Fortuna - San José</td>
+              <td>
+                <a href="RideDetails.html">Accept</a> |
+                <a href="#">Reject</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pie de página con enlaces -->
+        <footer>
+          <div class="footer-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </div>
+          <p>&copy; Aventones.com</p>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

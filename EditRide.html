@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Edit Ride</title>
+  <!-- Enlace al archivo de estilos CSS específico para esta vista -->
+  <link rel="stylesheet" href="css/estiloEditRide.css" />
+</head>
+<body>
+  <!-- Contenedor principal que ocupa toda la página -->
+  <div class="page-wrapper">
+    <!-- Contenedor central que delimita el área del contenido -->
+    <div class="container">
+      <main class="inner-content">
+
+        <!-- LOGO DE LA PÁGINA -->
+        <header>
+          <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+        </header>
+
+        <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+        <nav class="navbar">
+          <div class="nav-links">
+            <!-- Enlaces de navegación -->
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html" class="active">Rides</a> <!-- Pestaña activa -->
+            <a href="Bookings.html">Bookings</a>
+          </div>
+
+          <!-- Sección derecha de la barra: búsqueda y menú de usuario -->
+          <div class="nav-right">
+            <!-- Barra de búsqueda -->
+            <input type="text" placeholder="Search..." class="search-bar" />
+            
+            <!-- Menú desplegable del ícono de usuario -->
+            <div class="user-dropdown">
+              <!-- Checkbox oculto para controlar el menú -->
+              <input type="checkbox" class="toggle-menu" id="user-toggle" hidden />
+              <label for="user-toggle">
+                <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
+              </label>
+              <!-- Opciones que aparecen al hacer clic en el ícono -->
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="EditProfile.html">Profile</a>
+                <a href="Configuration.html">Configuration</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <h2 class="title">Edit Ride</h2>
+
+        <!-- FORMULARIO PARA EDITAR UN RIDE -->
+        <form class="ride-form">
+
+          <!-- Sección de entrada y llegada -->
+          <div class="form-row">
+            <div class="form-group">
+              <label>Departure from</label>
+              <input type="text" placeholder="Ciudad Quesada" />
+            </div>
+            <div class="form-group">
+              <label>Arrive To</label>
+              <input type="text" placeholder="Zarcero" />
+            </div>
+          </div>
+
+          <!-- Días seleccionados para el ride -->
+          <label>Days</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" checked> Mon</label>
+            <label><input type="checkbox" checked> Tue</label>
+            <label><input type="checkbox" checked> Wed</label>
+            <label><input type="checkbox" checked> Thu</label>
+            <label><input type="checkbox" checked> Fri</label>
+            <label><input type="checkbox" checked> Sat</label>
+            <label><input type="checkbox" checked> Sun</label>
+          </div>
+
+          <!-- Hora, asientos y tarifa -->
+          <div class="form-row time-seats-fee">
+            <div class="form-group">
+              <label>Time</label>
+              <select>
+                <option>10:00 am</option>
+                <option>9:00 am</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Seats</label>
+              <input type="number" value="2" />
+            </div>
+            <div class="form-group">
+              <label>Fee</label>
+              <input type="number" value="15" />
+            </div>
+          </div>
+
+          <!-- Información del vehículo asociada al ride -->
+          <fieldset class="vehicle-section">
+            <legend>Vehicle Details</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Make</label>
+                <select>
+                  <option>Nissan</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Model</label>
+                <input type="text" placeholder="Pathfinder" />
+              </div>
+              <div class="form-group">
+                <label>Year</label>
+                <input type="number" value="2015" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Botones de acción para guardar o cancelar -->
+          <div class="form-buttons">
+            <!-- Botón que redirige sin guardar -->
+            <a href="MyRides.html" class="cancel-link">Cancel</a>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="create-button">Save</button>
+          </div>
+        </form>
+
+        <!-- PIE DE PÁGINA CON ENLACES -->
+        <footer>
+          <div class="footer-links">
+            <!-- Enlaces de navegación adicionales -->
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </div>
+          <!-- Mensaje de derechos reservados -->
+          <p>&copy; Aventones.com</p>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

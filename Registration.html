@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Registro</title>
+  <link rel="stylesheet" href="css/estiloRegistration.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <script defer src="js/registration.js"></script> <!-- Script añadido correctamente -->
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <main class="inner-content">
+        <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+        <h1 class="title">User Registration</h1>
+
+        <form id="registration-form"> 
+          <div class="input-group">
+            <div class="input-field">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div class="input-field">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field full-width">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="input-field">
+              <label for="repeat-password">Repeat Password</label>
+              <input type="password" id="repeat-password" name="repeat-password" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field full-width">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option>Select</option>
+                <option>Costa Rica</option>
+                <option>Mexico</option>
+                <option>Guatemala</option>
+                <option>Estados Unidos</option>
+                <option>Peru</option>
+                <option>Panama</option>
+                <option>Noruega</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" />
+            </div>
+            <div class="input-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+
+          <div class="login-links">
+            <span>Already a user? <a href="index.html">Login here</a></span>
+            <span>Register as driver? <a href="RegistrationDriver.html">Click here</a></span>
+          </div>
+
+          <button type="submit" class="btn">Sign up</button>
+        </form>
+
+        <footer>
+          <div class="footer-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </div>
+          <p>&copy; Aventones.com</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

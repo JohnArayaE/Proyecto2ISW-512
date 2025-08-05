@@ -1,0 +1,296 @@
+/* Variables CSS globales */
+:root {
+  --color-fondo: #f1f3f6;
+  --color-blanco: white;
+  --color-navbar: #f1f1f1;
+  --color-texto: #333;
+  --color-activo: #167bd3;
+  --color-subrayado: #ccc;
+  --color-boton: #337ab7;
+  --color-footer: #999;
+
+  --fuente-principal: Arial, sans-serif;
+  --sombra-suave: 0 0 10px rgba(0, 0, 0, 0.05);
+
+  --radio-borde: 6px;
+  --padding-contenedor: 30px 20px;
+  --max-ancho-container: 1100px;
+  --max-ancho-inner: 900px;
+
+  --altura-navbar: 60px;
+  --font-size-titulo: 40px;
+  --font-size-link: 20px;
+  --font-size-campos: 16px;
+  --font-size-label: 14px;
+}
+
+/* Estilos base del body */
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor que centra todo */
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 0 100px;
+}
+
+/* Contenedor del contenido principal */
+.container {
+  width: 100%;
+  max-width: var(--max-ancho-container);
+  background-color: var(--color-blanco);
+  padding: var(--padding-contenedor);
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  justify-content: center;
+  min-height: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Área interna del contenido */
+.inner-content {
+  width: 100%;
+  max-width: var(--max-ancho-inner);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+/* Logo principal */
+.logo {
+  display: block;
+  margin: 0 auto 15px;
+  width: 450px;
+}
+
+/* Estilo del navbar */
+.navbar {
+  background-color: var(--color-navbar);
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--altura-navbar);
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Contenedor de enlaces de navegación */
+.nav-links {
+  display: flex;
+  height: 100%;
+}
+
+/* Enlaces individuales del navbar */
+.nav-links a {
+  padding: 0 30px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: var(--font-size-link);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Estilo para el enlace activo */
+.nav-links a.active {
+  background-color: var(--color-activo);
+  color: white;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* Sección derecha del navbar: búsqueda + icono */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  padding: 10px 15px;
+  font-size: var(--font-size-campos);
+  border-radius: var(--radio-borde);
+  width: 200px;
+}
+
+/* Icono de usuario */
+.user-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Contenedor del menú desplegable del usuario */
+.user-dropdown {
+  position: relative;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+/* Menú desplegable oculto por defecto */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-subrayado);
+  border-radius: 4px;
+  box-shadow: var(--sombra-suave);
+  width: 160px;
+  z-index: 10;
+}
+
+/* Estilo de cada enlace del menú */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--color-texto);
+  border-bottom: 1px solid var(--color-subrayado);
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* Mostrar el menú al hacer clic */
+.toggle-menu:checked + .dropdown-menu {
+  display: block;
+}
+
+/* Título de sección */
+.title {
+  text-align: center;
+  font-weight: 300;
+  font-size: var(--font-size-titulo);
+  color: #5e5858;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 0;
+}
+
+/* Línea debajo del título */
+.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px;
+  width: 200px;
+  background-color: var(--color-subrayado);
+}
+
+/* Estilo del formulario de configuración */
+.config-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Etiquetas del formulario */
+.config-form label {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-texto);
+}
+
+/* Inputs y textarea */
+.config-form input,
+.config-form textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: 1px solid var(--color-subrayado);
+  border-radius: 4px;
+}
+
+/* Contenedor de los botones */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Enlace de cancelar */
+.cancel-link {
+  color: var(--color-activo);
+  text-decoration: underline;
+  font-size: 18px;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Botón de guardar */
+.save-btn {
+  background-color: var(--color-boton);
+  color: white;
+  border: none;
+  padding: 14px 50px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo del pie de página */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid var(--color-subrayado);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+/* Enlaces del footer */
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 8px;
+  color: var(--color-texto);
+  text-decoration: none;
+  position: relative;
+}
+
+/* Separador entre enlaces */
+.footer-links a::after {
+  content: "|";
+  margin-left: 8px;
+  color: var(--color-footer);
+}
+
+.footer-links a:last-child::after {
+  content: "";
+}

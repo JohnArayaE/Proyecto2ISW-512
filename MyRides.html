@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - My Rides</title>
+  <link rel="stylesheet" href="css/estiloMyRides.css" />
+  <script defer src="js/myRides.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <main class="container">
+      <section class="inner-content">
+        <header>
+          <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+        </header>
+
+        <nav class="navbar" aria-label="Main Navigation">
+          <div class="nav-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html" class="active">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </div>
+          <div class="nav-right">
+            <input type="search" placeholder="Search..." class="search-bar" aria-label="Search" />
+            <div class="user-menu">
+              <label for="user-toggle" class="user-icon-label">
+                <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
+              </label>
+              <input type="checkbox" id="user-toggle" hidden />
+              <ul class="submenu">
+                <li><a href="index.html">Logout</a></li>
+                <li><a href="Configuration.html">Configuration</a></li>
+                <li><a href="EditProfile.html">Profile</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <h2 class="title">My rides</h2>
+
+        <section class="rides-section">
+          <a href="NewRide.html" class="new-ride-btn-link">New Ride</a>
+
+          <table class="rides-table">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Seats</th>
+                <th>Car</th>
+                <th>Fee</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="rides-body">
+              <!-- JS insertará aquí las filas de rides -->
+            </tbody>
+          </table>
+        </section>
+
+        <footer>
+          <nav class="footer-links" aria-label="Footer Navigation">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </nav>
+          <p>&copy; Aventones.com</p>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

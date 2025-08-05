@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Edit Profile</title>
+  <!-- Enlace al archivo de estilos CSS -->
+  <link rel="stylesheet" href="css/estiloEditProfile.css" />
+</head>
+<body>
+  <!-- Contenedor principal centrado -->
+  <div class="page-wrapper">
+    <div class="container">
+      <main class="inner-content">
+        <!-- Logo de la página -->
+        <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+          <div class="nav-links">
+            <!-- Enlaces de navegación principales -->
+            <a href="SearhRides.html" class="active">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </div>
+
+          <!-- Sección de búsqueda e icono de usuario -->
+          <div class="nav-right">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <!-- Icono de usuario -->
+              <label for="user-toggle" class="user-icon-label">
+                <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
+              </label>
+              <!-- Checkbox para mostrar el menú -->
+              <input type="checkbox" id="user-toggle" class="toggle-menu" />
+              <!-- Menú desplegable del usuario -->
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Configuration.html">Settings</a>
+                <a href="EditProfile.html">Profile</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Título principal -->
+        <h2 class="title">Edit Profile</h2>
+        <!-- Formulario de edición de perfil -->
+        <form class="profile-form">
+          <!-- Fila: Nombre y Apellido -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" value="Bladimir" />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" value="Arroyo" />
+            </div>
+          </div>
+
+          <!-- Fila: Email -->
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="email">Email</label>
+              <input type="email" id="email" value="bladimir.ab@gmail.com" />
+            </div>
+          </div>
+
+          <!-- Fila: Contraseña y repetir contraseña -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" />
+            </div>
+            <div class="form-group">
+              <label for="repeat-password">Repeat Password</label>
+              <input type="password" id="repeat-password" />
+            </div>
+          </div>
+
+          <!-- Fila: Dirección -->
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="address">Address</label>
+              <input type="text" id="address" value="2km norte" />
+            </div>
+          </div>
+
+          <!-- Fila: País y Estado -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country">
+                <option selected>Costa Rica</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="state" value="Alajuela" />
+            </div>
+          </div>
+
+          <!-- Fila: Ciudad y teléfono -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" value="Quesada" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" />
+            </div>
+          </div>
+
+          <!-- Botones de acción -->
+          <div class="button-row">
+            <a href="index.html" class="cancel-btn">Cancel</a>
+            <button type="submit" class="save-btn">Save</button>
+          </div>
+        </form>
+
+        <!-- Pie de página -->
+        <footer>
+          <nav class="footer-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </nav>
+          <p>&copy; Aventones.com</p>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

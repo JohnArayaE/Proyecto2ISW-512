@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Ride Details</title>
+  <link rel="stylesheet" href="css/estiloRideDetails.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <main class="inner-content">
+        <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+
+        <nav class="navbar">
+          <div class="nav-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html" class="active">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </div>
+          <div class="nav-right">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <label for="user-toggle" class="user-icon-label">
+                <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
+              </label>
+              <input type="checkbox" id="user-toggle" class="toggle-menu" />
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Configuration.html">Settings</a>
+                <a href="EditProfile.html">Profile</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <h2 class="title">Ride Details</h2>
+
+        <div class="user-info">
+          <img src="img/icon-user.png" alt="User Photo" class="user-photo" />
+          <p class="username">barroyo</p>
+        </div>
+
+        <div class="ride-info">
+          <p><strong>Departure from</strong> Quesada &nbsp;&nbsp; <strong>Arrive To</strong> Zarcero</p>
+
+          <div class="days">
+            <label><input type="checkbox" checked> Mon</label>
+            <label><input type="checkbox" checked> Tue</label>
+            <label><input type="checkbox" checked> Wed</label>
+            <label><input type="checkbox" checked> Thu</label>
+            <label><input type="checkbox" checked> Fri</label>
+            <label><input type="checkbox" checked> Sat</label>
+            <label><input type="checkbox" checked> Sun</label>
+          </div>
+
+          <div class="inputs-row">
+            <div>
+              <label for="time">Time</label>
+              <select id="time">
+                <option>09:00 AM</option>
+                <option selected>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>01:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+              </select>
+            </div>
+            <div>
+              <label for="seats">Seats</label>
+              <input type="number" id="seats" value="2" min="1" max="10" />
+            </div>
+            <div>
+              <label for="fee">Fee</label>
+              <input type="number" id="fee" value="15" min="0" />
+            </div>
+          </div>
+
+          <fieldset class="vehicle-details">
+            <legend>Vehicle Details</legend>
+            <div class="inputs-row">
+              <div>
+                <label for="make">Make</label>
+                <select id="make">
+                  <option selected>Nissan</option>
+                </select>
+              </div>
+              <div>
+                <label for="model">Model</label>
+                <input type="text" id="model" value="March" />
+              </div>
+              <div>
+                <label for="year">Year</label>
+                <input type="number" id="year" value="2020" />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="ride-buttons">
+          <a href="#" class="cancel-button">Cancel</a>
+          <button class="request-button">Request</button>
+        </div>
+
+        <footer>
+          <div class="footer-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </div>
+          <p>&copy; Aventones.com</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

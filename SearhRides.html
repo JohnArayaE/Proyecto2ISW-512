@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Search Rides</title>
+  <link rel="stylesheet" href="css/estiloSearchRides.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <main class="inner-content">
+        <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+
+        <nav class="navbar">
+          <div class="nav-links">
+            <a href="SearhRides.html" class="active">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </div>
+
+          <div class="nav-right">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <label for="user-toggle" class="user-icon-label">
+                <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
+              </label>
+              <input type="checkbox" id="user-toggle" class="toggle-menu" />
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Configuration.html">Settings</a>
+                <a href="EditProfile.html">Profile</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <h2 class="title">Search rides</h2>
+
+        <!-- FILTROS -->
+        <div class="filters-box">
+          <div class="filters-top">
+            <label for="from">From</label>
+            <select id="from"><option>Quesada</option></select>
+
+            <label for="to">To</label>
+            <select id="to"><option>Zarcero</option></select>
+
+            <button class="btn">Find rides</button>
+          </div>
+
+          <div class="filters-days">
+            <label><input type="checkbox" checked /> Mon</label>
+            <label><input type="checkbox" checked /> Tue</label>
+            <label><input type="checkbox" checked /> Wed</label>
+            <label><input type="checkbox" checked /> Thu</label>
+            <label><input type="checkbox" checked /> Fri</label>
+            <label><input type="checkbox" checked /> Sat</label>
+            <label><input type="checkbox" checked /> Sun</label>
+          </div>
+        </div>
+
+        <p class="results-text">
+          Rides found from <strong>Quesada</strong> to <strong>Zarcero</strong>
+        </p>
+
+        <!-- TABLA -->
+        <table class="rides-table">
+          <thead>
+            <tr>
+              <th>Driver</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Seats</th>
+              <th>Car</th>
+              <th>Fee</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="img/icon-user.png" alt="barroyo" class="table-icon">barroyo</td>
+              <td><a href="#">Quesada</a></td>
+              <td>Alajuela</td>
+              <td>2</td>
+              <td>Nissan Pathfinder 2015</td>
+              <td>$5</td>
+              <td><a href="RideDetails.html">Request</a></td>
+            </tr>
+            <tr>
+              <td><img src="img/icon-user.png" alt="barroyo" class="table-icon">barroyo</td>
+              <td><a href="#">Quesada</a></td>
+              <td>Naranjo</td>
+              <td>1</td>
+              <td>Toyota Corolla 2020</td>
+              <td>$10</td>
+              <td><a href="RideDetails.html">Request</a></td>
+            </tr>
+            <tr>
+              <td><img src="img/icon-user.png" alt="yluna" class="table-icon">yluna</td>
+              <td><a href="#">Aguas Zarcas</a></td>
+              <td>Naranjo</td>
+              <td>1</td>
+              <td>Ford Festiva 1990</td>
+              <td>--</td>
+              <td><a href="RideDetails.html">Request</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- MAPA -->
+        <div class="mapa">
+          <iframe 
+            class="mapa-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.509373006221!2d-83.03325362592735!3d9.990706673348024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa70fc61f80e3e5%3A0xecd8ae838d517226!2sLim%C3%B3n!5e0!3m2!1ses!2scr!4v1721665260723!5m2!1ses!2scr"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+          <div class="footer-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="Registration.html">Register</a>
+          </div>
+          <p>&copy; Aventones.com</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Login</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <script defer src="js/index.js"></script>
+</head>
+<body>
+  <main class="wrapper">
+    <section class="login-container">
+      <h2 class="visually-hidden">Sección de inicio de sesión</h2>
+      <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+
+      <div class="google-btn">
+        <button class="google" type="button">
+          <img src="img/Googlelogo.svg.png" alt="Google Icon" />
+          <span>Sign in with Google</span>
+        </button>
+      </div>
+
+      <p class="or">Or</p>
+
+      <form id="login-form">
+        <label for="email">Username (Email)</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <div class="register">
+          <span>Not a user? <a href="Registration.html">Register Now</a></span>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="SearhRides.html">Home</a>
+      <a href="MyRides.html">Rides</a>
+      <a href="Bookings.html">Bookings</a>
+      <a href="Configuration.html">Settings</a>
+      <a href="index.html">Login</a>
+      <a href="Registration.html">Register</a>
+    </div>
+    <p>&copy; Aventones.com</p>
+  </footer>
+</body>
+</html>

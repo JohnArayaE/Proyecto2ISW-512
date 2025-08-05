@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventones - Registro Conductor</title>
+  <link rel="stylesheet" href="css/estiloRegistrationDriver.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <script defer src="js/registrationDriver.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <main class="inner-content">
+        <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+        <h1 class="title">Driver Registration</h1>
+
+        <form id="registration-driver-form">
+          <div class="input-group">
+            <div class="input-field">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div class="input-field">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field full-width">
+              <label for="id">Identification Number (ID)</label>
+              <input type="text" id="id" name="id" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field full-width">
+              <label for="birthdate">Date of Birth</label>
+              <input type="date" id="birthdate" name="birthdate" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field full-width">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="input-field">
+              <label for="repeat-password">Repeat Password</label>
+              <input type="password" id="repeat-password" name="repeat-password" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field full-width">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+
+          <!-- Datos del vehículo -->
+          <div class="input-group">
+            <div class="input-field">
+              <label for="brand">Car Brand</label>
+              <input type="text" id="brand" name="brand" required />
+            </div>
+            <div class="input-field">
+              <label for="model">Car Model</label>
+              <input type="text" id="model" name="model" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <label for="year">Car Year</label>
+              <input type="number" id="year" name="year" required />
+            </div>
+            <div class="input-field">
+              <label for="plate">License Plate</label>
+              <input type="text" id="plate" name="plate" required />
+            </div>
+          </div>
+
+          <div class="login-links">
+            <span>Already registered? <a href="index.html">Login here</a></span>
+            <span>Not a driver? <a href="Registration.html">Register as client</a></span>
+          </div>
+
+          <button type="submit" class="btn">Sign up as Driver</button>
+        </form>
+
+        <footer>
+          <div class="footer-links">
+            <a href="SearhRides.html">Home</a>
+            <a href="MyRides.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Configuration.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="RegistrationDriver.html">Register Driver</a>
+          </div>
+          <p>&copy; Aventones.com</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
