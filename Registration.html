@@ -6,7 +6,8 @@
   <title>Aventones - Registro</title>
   <link rel="stylesheet" href="css/estiloRegistration.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <script defer src="js/registration.js"></script> <!-- Script añadido correctamente -->
+  <script defer src="js/registration.js"></script>
+  <script defer src="js/auth.js"></script>
 </head>
 <body>
   <div class="page-wrapper">
@@ -15,7 +16,8 @@
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
         <h1 class="title">User Registration</h1>
 
-        <form id="registration-form"> 
+        <form id="registration-form">
+          <!-- Nombre y Apellidos -->
           <div class="input-group">
             <div class="input-field">
               <label for="firstname">First Name</label>
@@ -27,6 +29,19 @@
             </div>
           </div>
 
+          <!-- Cédula y Fecha de Nacimiento -->
+          <div class="input-group">
+            <div class="input-field">
+              <label for="idNumber">Identification Number (ID)</label>
+              <input type="text" id="idNumber" name="idNumber" required />
+            </div>
+            <div class="input-field">
+              <label for="birthdate">Date of Birth</label>
+              <input type="date" id="birthdate" name="birthdate" required />
+            </div>
+          </div>
+
+          <!-- Correo -->
           <div class="input-group">
             <div class="input-field full-width">
               <label for="email">Email</label>
@@ -34,6 +49,7 @@
             </div>
           </div>
 
+          <!-- Contraseñas -->
           <div class="input-group">
             <div class="input-field">
               <label for="password">Password</label>
@@ -45,6 +61,7 @@
             </div>
           </div>
 
+          <!-- Dirección (opcional, lo dejo como lo tenías) -->
           <div class="input-group">
             <div class="input-field full-width">
               <label for="address">Address</label>
@@ -52,6 +69,7 @@
             </div>
           </div>
 
+          <!-- País y Estado -->
           <div class="input-group">
             <div class="input-field">
               <label for="country">Country</label>
@@ -72,6 +90,7 @@
             </div>
           </div>
 
+          <!-- Ciudad y Teléfono -->
           <div class="input-group">
             <div class="input-field">
               <label for="city">City</label>
@@ -79,7 +98,7 @@
             </div>
             <div class="input-field">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" />
+              <input type="tel" id="phone" name="phone" required />
             </div>
           </div>
 
@@ -104,6 +123,9 @@
         </footer>
       </main>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', requireDriver);
+  </script>
   </div>
 </body>
 </html>

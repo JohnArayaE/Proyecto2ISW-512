@@ -6,6 +6,7 @@
   <title>Aventones - New Ride</title>
   <link rel="stylesheet" href="css/estiloNewRide.css" />
   <script defer src="js/newRide.js"></script> <!-- Enlazar JS -->
+  <script defer src="js/auth.js"></script> 
 </head>
 <body>
   <div class="page-wrapper">
@@ -85,20 +86,15 @@
             <div class="form-row">
               <div class="form-group">
                 <label>Make</label>
-                <select id="make">
-                  <option>Nissan</option>
-                  <option>Toyota</option>
-                  <option>Hyundai</option>
-                  <option>Ford</option>
-                </select>
+                <input type="text" id="make" readonly />
               </div>
               <div class="form-group">
                 <label>Model</label>
-                <input type="text" id="model" placeholder="Car Model" />
+                <input type="text" id="model" readonly />
               </div>
               <div class="form-group">
                 <label>Year</label>
-                <input type="number" id="year" value="2020" />
+                <input type="number" id="year" readonly />
               </div>
             </div>
           </fieldset>
@@ -122,6 +118,9 @@
         </footer>
       </main>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', requireDriver);
+  </script>
   </div>
 </body>
 </html>

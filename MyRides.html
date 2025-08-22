@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aventones - My Rides</title>
   <link rel="stylesheet" href="css/estiloMyRides.css" />
+  <script defer src="js/auth.js"></script>       <!-- NUEVO: guard & navbar visibility -->
   <script defer src="js/myRides.js"></script>
+  <script defer src="js/auth.js"></script> 
 </head>
 <body>
   <div class="page-wrapper">
@@ -73,5 +75,10 @@
       </section>
     </main>
   </div>
+
+  <!-- NUEVO: redirección si NO es driver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', requireDriver);
+  </script>
 </body>
 </html>

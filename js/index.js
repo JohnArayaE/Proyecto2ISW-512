@@ -8,14 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const password = document.getElementById('password').value;
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
-
-    const user = users.find(
-      u => u.email === email && u.password === password
-    );
+    const user = users.find(u => u.email === email && u.password === password);
 
     if (user) {
-      localStorage.setItem('usuarioActivo', JSON.stringify(user));
-
+      sessionStorage.setItem('usuarioActivo', JSON.stringify(user));
       if (user.driver === true) {
         window.location.href = 'MyRides.html';
       } else {
