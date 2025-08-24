@@ -4,38 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aventones - Configuration</title>
-  <!-- Vincula el archivo CSS principal -->
   <link rel="stylesheet" href="css/estiloConfiguration.css" />
   <script defer src="js/auth.js"></script>
+  <script defer src="js/configuration.js"></script>
 </head>
 <body>
-  <!-- Contenedor principal centrado -->
   <div class="page-wrapper">
     <div class="container">
       <main class="inner-content">
-        <!-- Logo de la página -->
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
 
-        <!-- Barra de navegación -->
         <nav class="navbar">
           <div class="nav-links">
-            <!-- Enlaces de navegación principales -->
             <a href="SearhRides.html" class="active">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </div>
-
-          <!-- Sección de búsqueda e icono de usuario -->
           <div class="nav-right">
             <input type="text" placeholder="Search..." class="search-bar" />
             <div class="user-dropdown">
-              <!-- Icono de usuario -->
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
               </label>
-              <!-- Checkbox para mostrar el menú -->
               <input type="checkbox" id="user-toggle" class="toggle-menu" />
-              <!-- Menú desplegable del usuario -->
               <div class="dropdown-menu">
                 <a href="index.html">Logout</a>
                 <a href="Configuration.html">Settings</a>
@@ -45,30 +36,23 @@
           </div>
         </nav>
 
-        <!-- Título principal -->
         <h2 class="title">Configuration</h2>
 
-        <!-- Formulario de configuración -->
         <form class="config-form">
-          <!-- Campo de nombre -->
           <label for="name">Public Name</label>
-          <input type="text" id="name" name="name" value="Bladimir" />
+          <input type="text" id="name" name="name" placeholder="Tu nombre público" />
 
-          <!-- Campo de biografía -->
           <label for="bio">Public Bio</label>
-          <textarea id="bio" name="bio" rows="6"></textarea>
+          <textarea id="bio" name="bio" rows="6" placeholder="Escribe algo sobre ti..."></textarea>
 
-          <!-- Botones de acción -->
           <div class="form-actions">
             <a href="#" class="cancel-link">Cancel</a>
             <button type="submit" class="save-btn">Save</button>
           </div>
         </form>
 
-        <!-- Pie de página -->
         <footer>
           <div class="footer-links">
-            <!-- Enlaces del pie de página -->
             <a href="SearhRides.html">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html">Bookings</a>
@@ -81,8 +65,8 @@
       </main>
     </div>
     <script>
-    document.addEventListener('DOMContentLoaded', requireDriver);
-  </script>
+      document.addEventListener('DOMContentLoaded', requireDriver);
+    </script>
   </div>
 </body>
 </html>

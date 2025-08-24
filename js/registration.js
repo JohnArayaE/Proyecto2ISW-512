@@ -61,6 +61,6 @@ function storeInputs() {
   users.push(userData);
   localStorage.setItem('users', JSON.stringify(users));
 
-  alert('¡Registro exitoso!');
+  
   document.getElementById('registration-form').reset();
 }
