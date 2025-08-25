@@ -191,3 +191,45 @@ footer {
 .footer-links a:last-child::after {
   content: "";
 }
+/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+
+/* iPad Pro (1024×1366) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* No cambia diseño; solo asegura que nada se corte */
+  .container { padding: 28px; }
+  main.inner-content { max-width: 700px; }
+
+  /* Footer visible y sin desbordes */
+  footer { width: 100%; }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px; /* solo separación cuando saltan de línea */
+  }
+}
+
+/* iPhone 14 y móviles (≤430px) */
+@media (max-width: 430px) {
+  /* Respira un poco sin alterar el look */
+  .page-wrapper { padding: 20px 0; }
+  .container { padding: 20px; }
+
+  /* Logo proporcional (no cambia tu imagen, solo evita corte) */
+  .logo { max-width: 70%; height: auto; }
+
+  /* Campos en una sola columna para que quepan */
+  .input-field { flex: 1 0 100%; }
+  .full-width  { flex: 1 0 100%; }
+
+  /* Footer visible y envolviendo enlaces sin la barra extra al final */
+  footer { width: 100%; }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 10px;
+    margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+}

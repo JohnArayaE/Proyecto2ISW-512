@@ -30,7 +30,7 @@ body {
 
 /* Contenedor principal */
 .wrapper {
-  flex: 1;
+  flex: 1 0 auto;   /* antes tenías solo flex: 1 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,8 +156,9 @@ form input[type="password"] {
 
 /* Pie de página */
 footer {
+  flex-shrink: 0;
   width: 100%;
-  margin-top: 40px;
+  margin-top: auto;  /* asegura que se coloque al final */
   padding: 20px 0;
   border-top: 1px solid #ccc;
   text-align: center;
@@ -199,3 +200,66 @@ footer {
   clip: rect(0 0 0 0);
   border: 0;
 }
+/* =========================================================
+   RESPONSIVE — LOGIN (index.html)
+   Mantiene tu diseño desktop; solo evita desbordes y cortes
+   ========================================================= */
+
+/* ---------- iPad Pro (1024–1366) ---------- */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .login-container {
+    width: min(92vw, 750px);
+    margin-inline: auto;
+  }
+  .login-container .logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+  }
+}
+
+
+/* ---------- iPhone 14 y móviles (≤430px) ---------- */
+@media (max-width: 430px) {
+  .wrapper {
+    padding: 20px 16px;
+    min-height: 100dvh; /* adapta a notch y barras */
+  }
+  .login-container {
+    width: 92vw;
+    padding: 20px;
+    margin-inline: auto;
+  }
+  .login-container .logo {
+    max-width: 70%;
+    height: auto;
+  }
+  #login-form label {
+    width: 100%;
+    margin: 10px 0 4px;
+  }
+  #login-form input[type="text"],
+  #login-form input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+  }
+  .google-btn .google,
+  .login-btn {
+    width: 100%;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 10px;
+    margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+}
+

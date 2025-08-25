@@ -278,3 +278,66 @@ footer {
 .footer-links a:last-child::after {
   content: "";
 }
+/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+
+/* iPad Pro (1024×1366) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Navbar puede partirse en 2 filas si hace falta ancho */
+  .navbar { flex-wrap: wrap; height: auto; }
+  .nav-right { padding: 8px 20px; }
+  .search-bar { width: clamp(200px, 30vw, 280px); }
+
+  /* Footer visible y sin solapes */
+  footer { position: static; width: 100%; margin-top: 20px; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px 12px;
+  }
+}
+
+/* iPhone 14 y móviles (≤430px) */
+@media (max-width: 430px) {
+  .page-wrapper { padding: 20px 0 24px; }
+  .container { padding: 16px; min-height: auto; }
+
+  /* Logo proporcional */
+  .logo { max-width: 70%; height: auto; }
+
+  /* Navbar en 2 filas: links arriba, búsqueda + user abajo */
+  .navbar { flex-wrap: wrap; height: auto; padding: 8px 10px; }
+  .nav-links { width: 100%; justify-content: space-around; }
+
+  .nav-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto; /* search | user */
+    align-items: center;
+    column-gap: 10px;
+    padding: 8px 0 10px;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+  .user-dropdown { justify-self: end; }
+
+  /* Formulario: gutters y 1 columna (sin cambiar look) */
+  .profile-form { width: 100%; max-width: 700px; margin: 0 auto; padding-inline: 12px; }
+  .form-row { gap: 12px; }
+  .form-group, .full-width { flex: 1 0 100%; } /* cae a una sola columna */
+  .form-group input, .form-group select { width: 100%; box-sizing: border-box; }
+
+  /* Botones apilados y táctiles */
+  .button-row { flex-direction: column; align-items: stretch; gap: 12px; }
+  .save-btn { width: 100%; }
+  .cancel-btn { text-align: center; }
+
+  /* Footer ordenado y sin desbordes */
+  footer { position: static; width: 100%; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 6px 10px; margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+}

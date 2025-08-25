@@ -294,3 +294,77 @@ footer {
 .footer-links a:last-child::after {
   content: "";
 }
+
+
+/* iPad Pro (1024×1366) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .navbar { flex-wrap: wrap; height: auto; }
+  .nav-right { padding: 8px 20px; }
+  .search-bar { width: clamp(200px, 30vw, 280px); }
+
+  /* Footer visible y sin desbordes */
+  footer { position: static; width: 100%; margin-top: 20px; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px 12px;
+  }
+}
+
+/* iPhone 14 y móviles (≤430px) */
+@media (max-width: 430px) {
+  .page-wrapper { padding: 20px 0 24px; }
+  .container { padding: 16px; min-height: auto; }
+
+  /* Logo proporcional */
+  .logo { max-width: 70%; height: auto; }
+
+  /* Navbar en 2 filas: links arriba, búsqueda+usuario abajo */
+  .navbar { flex-wrap: wrap; height: auto; padding: 8px 10px; }
+  .nav-links { width: 100%; justify-content: space-around; }
+  .nav-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto; /* search | user */
+    align-items: center;
+    column-gap: 10px;
+    padding: 8px 0 10px;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+  .user-dropdown { justify-self: end; }
+
+  /* Formulario fluido sin tocar estilos base */
+  .config-form { width: 100%; max-width: none; }
+  .form-actions { flex-direction: column; gap: 12px; align-items: stretch; }
+  .save-btn { width: 100%; }
+  .cancel-link { display: inline-block; text-align: center; }
+
+  /* Footer ordenado */
+  footer { position: static; width: 100%; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 6px 10px; margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+  .config-form {
+    max-width: 600px;         /* volvemos a limitar el ancho */
+    margin: 0 auto;           /* centrado */
+    padding-inline: 12px;     /* gutters para que no pegue a los bordes */
+  }
+  .config-form input,
+  .config-form textarea {
+    width: 100%;
+    box-sizing: border-box;   /* evita que el padding rompa el ancho */
+  }
+
+  /* 2) Más espacio entre la fila de links y el buscador (navbar en 2 filas) */
+  .navbar {                   /* añade espacio entre filas del flex-wrap */
+    gap: 12px 10px;           /* row-gap | column-gap */
+  }
+  .nav-right {
+    padding-top: 6px; 
+}
+}

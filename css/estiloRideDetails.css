@@ -122,3 +122,82 @@
 .request-button:hover {
   background-color: #0d5ea2;
 }
+/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+
+/* iPad Pro (1024×1366) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Navbar puede partirse si falta ancho; buscador cómodo */
+  .navbar { flex-wrap: wrap; height: auto; }
+  .nav-right { padding: 8px 20px; }
+  .search-bar { width: clamp(200px, 30vw, 280px); }
+
+  /* Filas de inputs con buen respiro y sin overflow */
+  .inputs-row { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .inputs-row input, .inputs-row select { width: 160px; }
+
+  /* Footer visible y limpio */
+  footer { position: static; width: 100%; margin-top: 20px; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px 12px;
+  }
+}
+
+/* iPhone 14 y móviles (≤430px) */
+@media (max-width: 430px) {
+  .page-wrapper { padding: 20px 0 24px; }
+  .container { padding: 16px; }
+
+  /* Logo proporcional */
+  .logo { max-width: 70%; height: auto; }
+
+  /* Navbar en 2 filas: links arriba, búsqueda+user abajo */
+  .navbar { flex-wrap: wrap; height: auto; padding: 8px 10px; gap: 12px 10px; }
+  .nav-links { width: 100%; justify-content: space-around; }
+  .nav-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto; /* search | user */
+    align-items: center;
+    column-gap: 10px;
+    padding: 6px 0 10px;
+  }
+  .search-bar { width: 100%; max-width: none; box-sizing: border-box; }
+  .user-dropdown { justify-self: end; }
+
+  /* Info del ride: días compactos y multilinea */
+  .days { gap: 10px; }
+
+  /* Filas de inputs a grid para que no se corten */
+  .inputs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 por fila en móvil */
+    gap: 12px;
+    justify-items: stretch;
+  }
+  .inputs-row input, .inputs-row select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Vehicle details: una columna */
+  .vehicle-details .inputs-row { grid-template-columns: 1fr; }
+
+  /* Botones: apilados y táctiles */
+  .ride-buttons { flex-direction: column; gap: 12px; align-items: stretch; margin: 40px auto 40px; }
+  .request-button { width: 100%; }
+  .cancel-button { text-align: center; }
+
+  /* Footer ordenado y sin separadores extra */
+  footer { position: static; width: 100%; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 6px 10px; margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+}
+
+/* Desktop 1680×1050 (previene overflow lateral del footer) */
+@media (min-width: 1600px) and (max-width: 1700px) {
+  footer { left: 0; width: 100%; }
+}

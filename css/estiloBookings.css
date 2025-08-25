@@ -262,3 +262,63 @@ footer {
 .footer-links a:last-child::after {
   content: "";
 }
+/* iPad Pro (1024×1366) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Navbar puede envolver si falta ancho */
+  .navbar { flex-wrap: wrap; height: auto; }
+  .nav-right { padding: 8px 0; }
+  .search-bar { width: clamp(200px, 30vw, 280px); }
+
+  /* Tabla: scroll horizontal si no caben todas las columnas */
+  .rides-table { display: block; overflow-x: auto; }
+
+  /* Footer visible y sin desbordes / solapes */
+  footer { position: static; width: 100%; margin-top: 20px; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px 12px;
+  }
+}
+
+/* iPhone 14 y móviles (≤430px) — fuerza 2 filas y muestra la búsqueda */
+@media (max-width: 430px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px;
+  }
+
+  /* 1ª fila: links centrados */
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  /* 2ª fila: búsqueda ocupa todo; usuario a la derecha */
+  .nav-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto; /* search | user */
+    align-items: center;
+    column-gap: 10px;
+    padding: 8px 0 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 10px 14px; /* tacto cómodo */
+  }
+
+  .user-dropdown { justify-self: end; }
+
+  /* Tabla y footer como antes */
+  .rides-table { display: block; overflow-x: auto; white-space: nowrap; }
+  footer { position: static; width: 100%; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 6px 10px; margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+}

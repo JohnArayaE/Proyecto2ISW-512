@@ -381,3 +381,60 @@ footer {
   border: none;
   display: block;
 }
+
+
+/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+
+/* iPad Pro (1024×1366) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Navbar permite envolver sin cambiar estilos */
+  .navbar { flex-wrap: wrap; height: auto; }
+  .nav-right { padding: 8px 20px; }
+  .search-bar { width: clamp(200px, 30vw, 280px); }
+
+  /* Tabla no se rompe si hay muchas columnas */
+  .rides-table { display: block; overflow-x: auto; }
+
+  /* Footer visible y sin desbordes */
+  footer { position: static; width: 100%; margin-top: 20px; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px 12px;
+  }
+}
+
+/* iPhone 14 y móviles (≤430px) */
+@media (max-width: 430px) {
+  .page-wrapper { padding: 20px 0 24px; }
+  .container { padding: 16px; }
+
+  /* Logo proporcional, sin tocar desktop/tablet */
+  .logo { max-width: 70%; height: auto; }
+
+  /* Navbar en 2 filas: links arriba, búsqueda/usuario abajo */
+  .navbar { flex-wrap: wrap; height: auto; padding: 8px 10px; }
+  .nav-links { width: 100%; justify-content: space-around; }
+  .nav-right { width: 100%; justify-content: center; padding: 8px 0 10px; }
+  .search-bar { width: 100%; max-width: none; }
+
+  /* Filtros en una sola columna para que no se corten */
+  .filters-box { padding: 16px; gap: 12px; }
+  .filters-top { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .filters-days { gap: 10px; }
+
+  /* Tabla: scroll horizontal si no cabe */
+  .rides-table { display: block; overflow-x: auto; white-space: nowrap; }
+
+  /* Footer visible y ordenado */
+  footer { position: static; width: 100%; }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 6px 10px; margin-bottom: 10px;
+  }
+  .footer-links a::after { content: ""; }
+}
+
+/* Desktop 1680×1050 (sin cambios de look; previene overflow lateral) */
+@media (min-width: 1600px) and (max-width: 1700px) {
+  footer { left: 0; width: 100%; }
+}
