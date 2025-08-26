@@ -18,12 +18,12 @@
   const btnCancel = $("#btnCancel");
   const btnReq    = $("#btnRequest");
 
-  // 1) Preferimos SNAPSHOT exacto del click
+  // 1) Preferible SNAPSHOT exacto del click
   let ride = null;
   const snapRaw = sessionStorage.getItem("selectedRideSnapshot");
   if (snapRaw) { try { ride = JSON.parse(snapRaw); } catch {} }
 
-  // 2) Si no hay snapshot, usamos el índice de la URL (?i=)
+  // 2) Si no hay snapshot, se usa el índice de la URL (?i=)
   if (!ride) {
     const sp = new URLSearchParams(location.search);
     const idxParam = sp.get("i");
@@ -32,7 +32,7 @@
       const rides = getJSON("rides", []);
       if (Number.isFinite(idx) && rides[idx]) {
         ride = rides[idx];
-        // guardamos respaldo
+        // guardo respaldo
         sessionStorage.setItem("selectedRideIndex", String(idx));
         sessionStorage.setItem("selectedRideSnapshot", JSON.stringify(ride));
       }

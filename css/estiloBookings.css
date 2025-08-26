@@ -313,7 +313,6 @@ footer {
 
   .user-dropdown { justify-self: end; }
 
-  /* Tabla y footer como antes */
   .rides-table { display: block; overflow-x: auto; white-space: nowrap; }
   footer { position: static; width: 100%; }
   .footer-links {

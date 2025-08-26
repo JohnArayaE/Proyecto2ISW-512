@@ -299,9 +299,6 @@ select {
   color: var(--color-principal);
   text-decoration: underline;
   font-size: 20px;
-  /* Puedes agregar una línea visual debajo si deseas simular el subrayado como en el título:
-  border-bottom: 1px solid var(--color-borde);
-  padding-bottom: 2px; */
 }
 
 /* Botón Save estilizado */
@@ -327,7 +324,7 @@ select {
   gap: 160px;
   justify-content: flex-start;
 }
-/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+/* ======= SOLO RESPONSIVE ======= */
 
 /* iPad Pro (1024×1366) */
 @media (min-width: 1024px) and (max-width: 1366px) {

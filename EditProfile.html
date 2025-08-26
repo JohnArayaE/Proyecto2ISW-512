@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive en móviles/tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aventones - Edit Profile</title>
+  <!-- Estilos específicos de esta pantalla -->
   <link rel="stylesheet" href="css/estiloEditProfile.css" />
+  <!-- Primero valido acceso, luego manejo la lógica de edición -->
   <script defer src="js/auth.js"></script>
   <script defer src="js/editProfile.js"></script>
 </head>
@@ -12,16 +15,21 @@
   <div class="page-wrapper">
     <div class="container">
       <main class="inner-content">
+        <!-- Muestro el logo; el alt ayuda a accesibilidad -->
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
 
+        <!-- Navbar principal: links, buscador y menú de usuario -->
         <nav class="navbar">
           <div class="nav-links">
+            <!-- Mantengo los archivos tal cual están en el proyecto -->
             <a href="SearhRides.html" class="active">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </div>
           <div class="nav-right">
+            <!-- Buscador visual (si necesito lógica, la agrego en JS) -->
             <input type="text" placeholder="Search..." class="search-bar" />
+            <!-- Menú de usuario: uso checkbox como toggle para no depender de JS -->
             <div class="user-dropdown">
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
@@ -36,9 +44,12 @@
           </div>
         </nav>
 
+        <!-- Título de la vista -->
         <h2 class="title">Edit Profile</h2>
 
+        <!-- Formulario de edición de perfil -->
         <form class="profile-form">
+          <!-- Fila: nombre y apellido -->
           <div class="form-row">
             <div class="form-group">
               <label for="first-name">First Name</label>
@@ -50,6 +61,7 @@
             </div>
           </div>
 
+          <!-- Fila: email solo lectura (no quiero que lo editen aquí) -->
           <div class="form-row">
             <div class="form-group full-width">
               <label for="email">Email</label>
@@ -57,6 +69,7 @@
             </div>
           </div>
 
+          <!-- Fila: cambio de contraseña (opcional) -->
           <div class="form-row">
             <div class="form-group">
               <label for="password">Password</label>
@@ -68,6 +81,7 @@
             </div>
           </div>
 
+          <!-- Fila: dirección completa -->
           <div class="form-row">
             <div class="form-group full-width">
               <label for="address">Address</label>
@@ -75,6 +89,7 @@
             </div>
           </div>
 
+          <!-- Fila: país y estado -->
           <div class="form-row">
             <div class="form-group">
               <label for="country">Country</label>
@@ -87,7 +102,6 @@
                 <option value="Noruega">Noruega</option>
                 <option value="Nicaragua">Nicaragua</option>
                 <option value="Panama">Panama</option>
-                
               </select>
             </div>
             <div class="form-group">
@@ -96,6 +110,7 @@
             </div>
           </div>
 
+          <!-- Fila: ciudad y teléfono -->
           <div class="form-row">
             <div class="form-group">
               <label for="city">City</label>
@@ -107,12 +122,16 @@
             </div>
           </div>
 
+          <!-- Acciones del formulario -->
           <div class="button-row">
+            <!-- Cancel me devuelve al login (lo dejo así como en el proyecto) -->
             <a href="index.html" class="cancel-btn">Cancel</a>
+            <!-- Save dispara el submit; manejo validación/guardado en JS -->
             <button type="submit" class="save-btn">Save</button>
           </div>
         </form>
 
+        <!-- Footer con navegación secundaria y copyright -->
         <footer>
           <nav class="footer-links">
             <a href="SearhRides.html">Home</a>
@@ -126,6 +145,8 @@
         </footer>
       </main>
     </div>
+
+    <!-- Al terminar de cargar el DOM, valido permisos/rol -->
     <script>
       document.addEventListener('DOMContentLoaded', requireDriver);
     </script>

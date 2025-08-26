@@ -2,9 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aventones - Configuration</title>
+
+  <!-- Aplico los estilos específicos de esta pantalla -->
   <link rel="stylesheet" href="css/estiloConfiguration.css" />
+
+  <!-- Carga diferida: primero validación de acceso, luego la lógica de configuración -->
   <script defer src="js/auth.js"></script>
   <script defer src="js/configuration.js"></script>
 </head>
@@ -12,16 +17,23 @@
   <div class="page-wrapper">
     <div class="container">
       <main class="inner-content">
+        <!-- Muestro el logo; el alt ayuda a accesibilidad -->
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
 
+        <!-- Navbar principal con enlaces, buscador y menú de usuario -->
         <nav class="navbar">
           <div class="nav-links">
+            <!-- Mantengo los nombres de archivo tal como están en el proyecto -->
             <a href="SearhRides.html" class="active">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </div>
+
           <div class="nav-right">
+            <!-- Buscador simple; si necesito lógica, la agrego en JS -->
             <input type="text" placeholder="Search..." class="search-bar" />
+
+            <!-- Menú de usuario: uso checkbox como toggle para abrir/cerrar con CSS -->
             <div class="user-dropdown">
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
@@ -36,21 +48,27 @@
           </div>
         </nav>
 
+        <!-- Título de la vista -->
         <h2 class="title">Configuration</h2>
 
+        <!-- Formulario donde seteo nombre y bio públicas -->
         <form class="config-form">
+          <!-- Nombre público: lo muestro tal cual se verá -->
           <label for="name">Public Name</label>
           <input type="text" id="name" name="name" placeholder="Tu nombre público" />
 
+          <!-- Bio pública: doy espacio suficiente para escribir -->
           <label for="bio">Public Bio</label>
           <textarea id="bio" name="bio" rows="6" placeholder="Escribe algo sobre ti..."></textarea>
 
+          <!-- Acciones del formulario: cancelar o guardar -->
           <div class="form-actions">
             <a href="#" class="cancel-link">Cancel</a>
             <button type="submit" class="save-btn">Save</button>
           </div>
         </form>
 
+        <!-- Footer con navegación secundaria y copyright -->
         <footer>
           <div class="footer-links">
             <a href="SearhRides.html">Home</a>
@@ -64,6 +82,8 @@
         </footer>
       </main>
     </div>
+
+    <!-- Al cargar el DOM, valido permisos/rol antes de permitir cambios -->
     <script>
       document.addEventListener('DOMContentLoaded', requireDriver);
     </script>

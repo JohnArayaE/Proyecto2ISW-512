@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Codificación y viewport para responsive -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título de la pestaña -->
   <title>Aventones - Ride Details</title>
+  <!-- Estilos específicos de esta pantalla -->
   <link rel="stylesheet" href="css/estiloRideDetails.css" />
+  <!-- JS diferidos: primero validación (auth), luego lógica de detalles -->
   <script defer src="js/auth.js"></script>
   <script defer src="js/rideDetails.js"></script>
 </head>
 <body>
+  <!-- Envoltorios de layout: me ayudan a controlar anchos y separar contenido del footer -->
   <div class="page-wrapper">
     <div class="container">
       <main class="inner-content">
+        <!-- Logo con alt por accesibilidad -->
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
 
+        <!-- Navbar: links principales + buscador + menú de usuario -->
         <nav class="navbar">
+          <!-- Sección izquierda: enlaces -->
           <div class="nav-links">
+            <!-- Mantengo el nombre del archivo tal cual está en el proyecto -->
             <a href="SearhRides.html">Home</a>
             <a href="MyRides.html" class="active">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </div>
+          <!-- Sección derecha: buscador y dropdown del usuario -->
           <div class="nav-right">
             <input type="text" placeholder="Search..." class="search-bar" />
             <div class="user-dropdown">
+              <!-- Uso un checkbox oculto para abrir/cerrar el menú con CSS -->
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
               </label>
@@ -36,26 +47,31 @@
           </div>
         </nav>
 
+        <!-- Título de la vista -->
         <h2 class="title">Ride Details</h2>
 
+        <!-- Info del conductor: foto (estática) + nombre (lo llena JS) -->
         <div class="user-info">
           <img src="img/icon-user.png" alt="User Photo" class="user-photo" />
           <p id="driverName" class="username"></p>
         </div>
 
+        <!-- Bloque principal de datos del viaje -->
         <div class="ride-info">
+          <!-- Origen/Destino: coloco spans para que JS inserte valores -->
           <p>
             <strong>Departure from</strong> <span id="fromTxt"></span>
             &nbsp;&nbsp; <strong>Arrive To</strong> <span id="toTxt"></span>
           </p>
 
-          <!-- SIN DÍAS QUEMADOS: el JS los genera -->
+          <!-- Días disponibles del ride: los creo desde JS dentro de este contenedor -->
           <div class="days" id="daysBox"></div>
 
+          <!-- Fila de inputs de solo lectura: hora, asientos y tarifa -->
           <div class="inputs-row">
             <div>
               <label for="time">Time</label>
-              <!-- SIN OPCIONES: el JS inserta la del ride -->
+              <!-- El valor lo setea JS; readonly para que no se edite -->
               <input type="text" id="time" readonly />
             </div>
             <div>
@@ -68,6 +84,7 @@
             </div>
           </div>
 
+          <!-- Datos del vehículo: agrupo en fieldset por semántica -->
           <fieldset class="vehicle-details">
             <legend>Vehicle Details</legend>
             <div class="inputs-row">
@@ -87,11 +104,13 @@
           </fieldset>
         </div>
 
+        <!-- Botones de acción: cancelar (link) y solicitar (botón) -->
         <div class="ride-buttons">
           <a href="#" class="cancel-button" id="btnCancel">Cancel</a>
           <button class="request-button" id="btnRequest">Request</button>
         </div>
 
+        <!-- Footer con navegación secundaria y copyright -->
         <footer>
           <div class="footer-links">
             <a href="SearhRides.html">Home</a>
@@ -105,6 +124,7 @@
         </footer>
       </main>
     </div>
+    <!-- Al cargar el DOM verifico permisos/sesión antes de usar la vista -->
     <script>
       document.addEventListener('DOMContentLoaded', requireDriver);
     </script>

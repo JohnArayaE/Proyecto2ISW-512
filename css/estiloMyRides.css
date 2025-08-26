@@ -276,7 +276,7 @@ footer {
 }
 
 
-/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+/* ======= SOLO RESPONSIVE  ======= */
 
 /* iPad Pro (1024×1366) */
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -301,7 +301,7 @@ footer {
   .page-wrapper { padding: 20px 0 24px; }
   .container { padding: 16px; }
 
-  /* Logo proporcional (no afecta tablet/desktop) */
+  /* Logo proporcional  */
   .logo { max-width: 70%; height: auto; }
 
   /* Navbar en 2 filas: links arriba, búsqueda/usuario abajo */

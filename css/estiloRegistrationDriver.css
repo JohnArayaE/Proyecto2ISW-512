@@ -191,7 +191,7 @@ footer {
 .footer-links a:last-child::after {
   content: "";
 }
-/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+/* ======= SOLO RESPONSIVE ======= */
 
 /* Desktop 1680×1050 (evitar overflow del footer) */
 @media (min-width: 1600px) and (max-width: 1700px) {
@@ -200,7 +200,7 @@ footer {
 
 /* iPad Pro (1024×1366) */
 @media (min-width: 1024px) and (max-width: 1366px) {
-  /* No cambia tu look; solo previene cortes y asegura footer visible */
+  /*previene cortes y asegura footer visible */
   .container { padding: 28px; }
   main.inner-content { max-width: 700px; }
   footer { width: 100%; }

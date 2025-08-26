@@ -309,7 +309,7 @@ select {
   gap: 160px;
   justify-content: flex-start;
 }
-/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+/* ======= SOLO RESPONSIVE ======= */
 
 /* iPad Pro (1024×1366) */
 @media (min-width: 1024px) and (max-width: 1366px) {

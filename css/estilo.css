@@ -202,7 +202,6 @@ footer {
 }
 /* =========================================================
    RESPONSIVE — LOGIN (index.html)
-   Mantiene tu diseño desktop; solo evita desbordes y cortes
    ========================================================= */
 
 /* ===== iPad Pro (1024–1366) — desactivar flex vertical y mostrar footer ===== */
@@ -214,17 +213,17 @@ footer {
 
   /* Wrapper en flujo normal (sin centrado vertical) */
   .wrapper {
-    display: block;                        /* <- fuera el flex del wrapper */
-    margin: 32px auto 0;                   /* aire arriba y centrado horizontal */
-    padding: 0;                            /* sin rellenos que empujen */
+    display: block;                        
+    margin: 32px auto 0;                   
+    padding: 0;                            
     width: 100%;
   }
 
   /* Caja del login: misma estética, sin desbordar */
   .login-container {
     width: 750px;
-    max-width: 92vw;                        /* si el viewport fuese más angosto */
-    margin-inline: auto;                    /* centrada */
+    max-width: 92vw;                        
+    margin-inline: auto;                    
   }
   .login-container .logo {
     width: 300px;
@@ -235,7 +234,7 @@ footer {
   /* Footer normal y visible, pegado al contenido */
   footer {
     position: static !important;
-    margin-top: 24px !important;            /* un respiro corto sobre el footer */
+    margin-top: 24px !important;           
     width: 100%;
   }
 

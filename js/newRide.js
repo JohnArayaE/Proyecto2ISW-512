@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // AHORA: usuarioActivo desde sessionStorage (antes lo leías de localStorage)
+    // AHORA: usuarioActivo desde sessionStorage 
     const user = JSON.parse(sessionStorage.getItem("usuarioActivo"));
     if (!user || !user.email) {
       alert("No user is logged in.");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ownerEmail: user.email
     };
 
-    // Mantengo tu lógica original: rides en localStorage
+    
     const rides = JSON.parse(localStorage.getItem("rides")) || [];
     rides.push(ride);
     localStorage.setItem("rides", JSON.stringify(rides));

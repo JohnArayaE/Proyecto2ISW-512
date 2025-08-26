@@ -2,18 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive en móviles/tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aventones - Login</title>
+  <!-- Estilos del login -->
   <link rel="stylesheet" href="css/estilo.css" />
+  <!-- Lógica de la pantalla y validación de acceso (defer para cargar al final) -->
   <script defer src="js/index.js"></script>
   <script defer src="js/auth.js"></script>
 </head>
 <body>
+  <!-- Contenedor principal; centro el card de login -->
   <main class="wrapper">
     <section class="login-container">
+      <!-- Encabezado oculto para accesibilidad -->
       <h2 class="visually-hidden">Sección de inicio de sesión</h2>
+
+      <!-- Logo con alt descriptivo -->
       <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
 
+      <!-- Botón de Google solo UI; si integro OAuth real lo hago en JS -->
       <div class="google-btn">
         <button class="google" type="button">
           <img src="img/Googlelogo.svg.png" alt="Google Icon" />
@@ -21,8 +29,10 @@
         </button>
       </div>
 
+      <!-- Separador visual -->
       <p class="or">Or</p>
 
+      <!-- Form de login: dejo IDs claros para usarlos en JS -->
       <form id="login-form">
         <label for="email">Username (Email)</label>
         <input type="text" id="email" name="email" required />
@@ -30,15 +40,18 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
 
+        <!-- Enlace a registro por si no tiene cuenta -->
         <div class="register">
           <span>Not a user? <a href="Registration.html">Register Now</a></span>
         </div>
 
+        <!-- Botón principal; capturo el submit en index.js -->
         <button type="submit" class="login-btn">Login</button>
       </form>
     </section>
   </main>
 
+  <!-- Footer con navegación secundaria -->
   <footer>
     <div class="footer-links">
       <a href="SearhRides.html">Home</a>
@@ -51,7 +64,8 @@
     <p>&copy; Aventones.com</p>
   </footer>
 </body>
+<!-- Al cargar el DOM, valido que la vista pueda usarse -->
 <script>
-    document.addEventListener('DOMContentLoaded', requireDriver);
-  </script>
+  document.addEventListener('DOMContentLoaded', requireDriver);
+</script>
 </html>

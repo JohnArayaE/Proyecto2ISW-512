@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Codificación estándar -->
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive en móviles/tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título de la pestaña -->
   <title>Aventones - Registro Conductor</title>
+
+  <!-- Hoja de estilos específica de esta pantalla -->
   <link rel="stylesheet" href="css/estiloRegistrationDriver.css" />
+
+  <!-- Fuente usada en esta vista (solo la traigo aquí para no tocar otras pantallas) -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <!-- JS diferidos: primero la lógica del registro, luego la validación de acceso -->
   <script defer src="js/registrationDriver.js"></script>
   <script defer src="js/auth.js"></script>
 </head>
 <body>
+  <!-- Envoltorios de layout para controlar anchos y separar contenido del footer -->
   <div class="page-wrapper">
     <div class="container">
       <main class="inner-content">
+        <!-- Logo con alt por accesibilidad -->
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
+        <!-- Título principal de la vista -->
         <h1 class="title">Driver Registration</h1>
 
+        <!-- Formulario de registro del conductor -->
         <form id="registration-driver-form">
+          <!-- Grupo 1: nombre y apellido -->
           <div class="input-group">
             <div class="input-field">
               <label for="firstname">First Name</label>
@@ -28,6 +42,7 @@
             </div>
           </div>
 
+          <!-- Grupo 2: identificación (a propósito lo dejo full-width) -->
           <div class="input-group">
             <div class="input-field full-width">
               <label for="id">Identification Number (ID)</label>
@@ -35,6 +50,7 @@
             </div>
           </div>
 
+          <!-- Grupo 3: fecha de nacimiento -->
           <div class="input-group">
             <div class="input-field full-width">
               <label for="birthdate">Date of Birth</label>
@@ -42,6 +58,7 @@
             </div>
           </div>
 
+          <!-- Grupo 4: correo -->
           <div class="input-group">
             <div class="input-field full-width">
               <label for="email">Email</label>
@@ -49,6 +66,7 @@
             </div>
           </div>
 
+          <!-- Grupo 5: contraseña y confirmación -->
           <div class="input-group">
             <div class="input-field">
               <label for="password">Password</label>
@@ -60,6 +78,7 @@
             </div>
           </div>
 
+          <!-- Grupo 6: teléfono (full-width para lectura clara) -->
           <div class="input-group">
             <div class="input-field full-width">
               <label for="phone">Phone Number</label>
@@ -67,7 +86,7 @@
             </div>
           </div>
 
-          <!-- Datos del vehículo -->
+          <!-- Datos del vehículo (separados en pares para un layout claro) -->
           <div class="input-group">
             <div class="input-field">
               <label for="brand">Car Brand</label>
@@ -90,16 +109,20 @@
             </div>
           </div>
 
+          <!-- Links auxiliares: redirijo a login o a registro de cliente -->
           <div class="login-links">
             <span>Already registered? <a href="index.html">Login here</a></span>
             <span>Not a driver? <a href="Registration.html">Register as client</a></span>
           </div>
 
+          <!-- Botón principal de envío (el JS captura el submit) -->
           <button type="submit" class="btn">Sign up as Driver</button>
         </form>
 
+        <!-- Footer con navegación secundaria y copyright -->
         <footer>
           <div class="footer-links">
+            <!-- Mantengo los nombres de archivo tal como están en el proyecto -->
             <a href="SearhRides.html">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html">Bookings</a>
@@ -111,6 +134,8 @@
         </footer>
       </main>
     </div>
+
+    <!-- Al cargar el DOM verifico permisos/sesión antes de permitir el uso -->
     <script>
     document.addEventListener('DOMContentLoaded', requireDriver);
   </script>

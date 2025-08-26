@@ -2,32 +2,46 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aventones - My Rides</title>
+
+  <!-- Aplico los estilos propios de esta pantalla -->
   <link rel="stylesheet" href="css/estiloMyRides.css" />
+
+  <!-- Carga diferida: primero la lógica de “mis rides”, luego la validación de acceso -->
   <script defer src="js/myRides.js"></script>
   <script defer src="js/auth.js"></script> 
 </head>
 <body>
   <div class="page-wrapper">
+    <!-- Uso <main> como contenedor semántico principal -->
     <main class="container">
       <section class="inner-content">
         <header>
+          <!-- Muestro el logo; el alt ayuda a accesibilidad -->
           <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
         </header>
 
+        <!-- Navbar principal: enlaces, buscador y menú de usuario -->
         <nav class="navbar" aria-label="Main Navigation">
           <div class="nav-links">
+            <!-- Mantengo el archivo tal como está en el proyecto -->
             <a href="SearhRides.html">Home</a>
             <a href="MyRides.html" class="active">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </div>
+
           <div class="nav-right">
+            <!-- Buscador simple; si necesito lógica, la hago en JS -->
             <input type="search" placeholder="Search..." class="search-bar" aria-label="Search" />
+
+            <!-- Menú de usuario con toggle por checkbox (no necesito JS para abrir/cerrar) -->
             <div class="user-menu">
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
               </label>
+              <!-- Mantengo el checkbox oculto y lo uso como disparador del submenu -->
               <input type="checkbox" id="user-toggle" hidden />
               <ul class="submenu">
                 <li><a href="index.html">Logout</a></li>
@@ -38,11 +52,15 @@
           </div>
         </nav>
 
+        <!-- Título de la vista -->
         <h2 class="title">My rides</h2>
 
+        <!-- Sección principal con botón para crear y tabla para listar -->
         <section class="rides-section">
+          <!-- Botón para ir a crear un nuevo ride -->
           <a href="NewRide.html" class="new-ride-btn-link">New Ride</a>
 
+          <!-- Tabla de mis rides; dejo el <tbody> vacío para que JS lo llene -->
           <table class="rides-table">
             <thead>
               <tr>
@@ -60,6 +78,7 @@
           </table>
         </section>
 
+        <!-- Footer con navegación secundaria -->
         <footer>
           <nav class="footer-links" aria-label="Footer Navigation">
             <a href="SearhRides.html">Home</a>
@@ -75,7 +94,7 @@
     </main>
   </div>
 
-  <!-- NUEVO: redirección si NO es driver -->
+  <!-- Al cargar el DOM verifico permisos/rol antes de mostrar la pantalla -->
   <script>
     document.addEventListener('DOMContentLoaded', requireDriver);
   </script>

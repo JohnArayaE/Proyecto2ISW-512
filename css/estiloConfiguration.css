@@ -350,7 +350,7 @@ footer {
   }
   .footer-links a::after { content: ""; }
   .config-form {
-    max-width: 600px;         /* volvemos a limitar el ancho */
+    max-width: 600px;         /* limitar el ancho */
     margin: 0 auto;           /* centrado */
     padding-inline: 12px;     /* gutters para que no pegue a los bordes */
   }

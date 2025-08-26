@@ -278,7 +278,7 @@ footer {
 .footer-links a:last-child::after {
   content: "";
 }
-/* ======= SOLO RESPONSIVE (agregar al final) ======= */
+/* ======= SOLO RESPONSIVE  ======= */
 
 /* iPad Pro (1024×1366) */
 @media (min-width: 1024px) and (max-width: 1366px) {

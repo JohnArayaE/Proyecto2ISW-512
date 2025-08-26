@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Codificación estándar -->
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive en móviles/tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título de la pestaña -->
   <title>Aventones - Search Rides</title>
+  <!-- Hoja de estilos específica de esta pantalla -->
   <link rel="stylesheet" href="css/estilosearchRides.css" />
 
+  <!-- Cargo JS con defer para que se ejecuten cuando el DOM ya está listo -->
+  <!-- auth.js valida sesión/rol antes de dejar usar la página -->
   <script defer src="js/auth.js"></script>
+  <!-- searchRides.js maneja filtros, búsqueda y pintado de resultados -->
   <script defer src="js/searchRides.js"></script>
 </head>
 <body>
+  <!-- Envoltorio general de la página (me ayuda a distribuir contenido y footer) -->
   <div class="page-wrapper">
     <div class="container">
+      <!-- Contenido principal de la pantalla -->
       <main class="inner-content">
+        <!-- Logo con alt por accesibilidad -->
         <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
 
+        <!-- Barra de navegación: links principales + buscador + menú de usuario -->
         <nav class="navbar">
+          <!-- Links de navegación (izquierda) -->
           <div class="nav-links">
             <a href="SearchRides.html" class="active">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </div>
 
+          <!-- Acciones a la derecha: buscador y menú de usuario -->
           <div class="nav-right">
+            <!-- Buscador visual (si necesito lógica, la hago en JS) -->
             <input type="text" placeholder="Search..." class="search-bar" />
+
+            <!-- Menú de usuario: uso un checkbox oculto para abrir/cerrar con CSS -->
             <div class="user-dropdown">
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
               </label>
+              <!-- Toggle del menú (no necesito JS para desplegar) -->
               <input type="checkbox" id="user-toggle" class="toggle-menu" />
               <div class="dropdown-menu">
                 <a href="index.html">Logout</a>
@@ -38,10 +55,12 @@
           </div>
         </nav>
 
+        <!-- Título principal de la vista -->
         <h2 class="title">Search rides</h2>
 
-        <!-- FILTROS -->
+        <!-- FILTROS: origen/destino + días + botón de búsqueda -->
         <div class="filters-box">
+          <!-- Parte superior de filtros: From / To / Botón -->
           <div class="filters-top">
             <label for="from">From</label>
             <input type="text" id="from" placeholder="Ej: Limón" />
@@ -49,9 +68,11 @@
             <label for="to">To</label>
             <input type="text" id="to" placeholder="Ej: Guápiles" />
 
+            <!-- Botón que uso en JS para disparar la búsqueda -->
             <button id="btnFind" class="btn">Find rides</button>
           </div>
 
+          <!-- Selección de días: dejo todos activos por defecto -->
           <div class="filters-days">
             <label><input type="checkbox" class="day" value="Mon" checked /> Mon</label>
             <label><input type="checkbox" class="day" value="Tue" checked /> Tue</label>
@@ -63,11 +84,12 @@
           </div>
         </div>
 
+        <!-- Texto de resultados (arranca oculto; lo muestro/actualizo desde JS) -->
         <p id="resultsText" class="results-text hidden">
           Rides found from <strong id="fromTxt"></strong> to <strong id="toTxt"></strong>
         </p>
 
-        <!-- TABLA (sin filas quemadas) -->
+        <!-- TABLA de resultados: dejo el <tbody> vacío para llenarlo por JS -->
         <table class="rides-table">
           <thead>
             <tr>
@@ -94,7 +116,7 @@
           </iframe>
         </div>
 
-        <!-- FOOTER -->
+        <!-- FOOTER con enlaces repetidos para navegación rápida -->
         <footer>
           <div class="footer-links">
             <a href="SearchRides.html">Home</a>
@@ -109,6 +131,7 @@
       </main>
     </div>
 
+    <!-- Cuando el DOM termina de cargar, verifico permisos/sesión -->
     <script>
       document.addEventListener('DOMContentLoaded', requireDriver);
     </script>

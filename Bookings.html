@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Hago la página responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aventones - Bookings</title>
+  <!-- Estilos específicos de esta pantalla -->
   <link rel="stylesheet" href="css/estiloBookings.css" />
+  <!-- Primero valido acceso; luego cargo la lógica de reservas -->
   <script defer src="js/auth.js"></script>
   <script defer src="js/bookings.js"></script>
 </head>
@@ -13,17 +16,22 @@
     <main class="container">
       <section class="inner-content">
         <header>
+          <!-- Muestro el logo; el alt ayuda a accesibilidad -->
           <img src="img/imagenLogo.png" alt="Logo Aventones" class="logo" />
         </header>
 
+        <!-- Navbar con enlaces, buscador y menú de usuario -->
         <nav class="navbar">
           <div class="nav-links">
+            <!-- Mantengo los archivos tal como están en el proyecto -->
             <a href="SearhRides.html">Home</a>
             <a href="MyRides.html">Rides</a>
             <a href="Bookings.html" class="active">Bookings</a>
           </div>
           <div class="nav-right">
+            <!-- Buscador simple; si necesito lógica, la agrego en JS -->
             <input type="text" placeholder="Search..." class="search-bar" />
+            <!-- Menú de usuario con toggle por checkbox (CSS) -->
             <div class="user-dropdown">
               <label for="user-toggle" class="user-icon-label">
                 <img src="img/icon-user.png" alt="User Icon" class="user-icon" />
@@ -38,8 +46,10 @@
           </div>
         </nav>
 
+        <!-- Título de la vista -->
         <h2 class="title">Bookings</h2>
 
+        <!-- Tabla: dejo el tbody vacío para llenarlo desde bookings.js -->
         <table class="rides-table">
           <thead>
             <tr>
@@ -51,6 +61,7 @@
           <tbody id="bookingsBody"></tbody>
         </table>
 
+        <!-- Footer con navegación secundaria y copyright -->
         <footer>
           <div class="footer-links">
             <a href="SearhRides.html">Home</a>
@@ -65,9 +76,9 @@
       </section>
     </main>
   </div>
+  <!-- Al cargar el DOM verifico permisos/rol antes de mostrar la pantalla -->
   <script>
     document.addEventListener('DOMContentLoaded', requireDriver);
   </script>
 </body>
 </html>
-

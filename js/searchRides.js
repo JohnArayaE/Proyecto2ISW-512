@@ -117,12 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <td><a class="request-link" href="RideDetails.html?i=${idx}" data-index="${idx}">Request</a></td>
       `;
 
-      // Guardamos snapshot (por si el orden cambia o abren en la misma pestaña)
+      // Guardo snapshot (por si el orden cambia o abren en la misma pestaña)
       tr.querySelector(".request-link")?.addEventListener("click", (ev) => {
         const i = Number(ev.currentTarget.getAttribute("data-index"));
         sessionStorage.setItem("selectedRideIndex", String(i));
         sessionStorage.setItem("selectedRideSnapshot", JSON.stringify(rides[i]));
-        // no evitamos la navegación: el href ?i= garantiza el índice correcto
+        // no se evita la navegación: el href ?i= garantiza el índice correcto
       });
 
       tbody.appendChild(tr);
