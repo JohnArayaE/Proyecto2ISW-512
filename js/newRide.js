@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rides.push(ride);
     localStorage.setItem("rides", JSON.stringify(rides));
 
-    alert("Ride created successfully!");
+    // Redirigir a MyRides.html después de guardar
     window.location.href = "MyRides.html";
   });
 });

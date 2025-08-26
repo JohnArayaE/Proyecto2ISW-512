@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newActive = { ...active, ...updates };
     sessionStorage.setItem("usuarioActivo", JSON.stringify(newActive));
 
-    alert("Profile updated.");
+    
     passEl.value = "";
     pass2El.value = "";
   });
