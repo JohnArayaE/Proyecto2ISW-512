@@ -205,17 +205,41 @@ footer {
    Mantiene tu diseño desktop; solo evita desbordes y cortes
    ========================================================= */
 
-/* ---------- iPad Pro (1024–1366) ---------- */
+/* ===== iPad Pro (1024–1366) — desactivar flex vertical y mostrar footer ===== */
 @media (min-width: 1024px) and (max-width: 1366px) {
+
+  /* Usa altura real del viewport y quita el layout flex para esta vista */
+  html, body { min-height: 100dvh; height: auto; }
+  body { display: block; }                 /* <- fuera el flex-column en iPad */
+
+  /* Wrapper en flujo normal (sin centrado vertical) */
+  .wrapper {
+    display: block;                        /* <- fuera el flex del wrapper */
+    margin: 32px auto 0;                   /* aire arriba y centrado horizontal */
+    padding: 0;                            /* sin rellenos que empujen */
+    width: 100%;
+  }
+
+  /* Caja del login: misma estética, sin desbordar */
   .login-container {
-    width: min(92vw, 750px);
-    margin-inline: auto;
+    width: 750px;
+    max-width: 92vw;                        /* si el viewport fuese más angosto */
+    margin-inline: auto;                    /* centrada */
   }
   .login-container .logo {
-    max-width: 300px;
-    width: 100%;
+    width: 300px;
+    max-width: 90%;
     height: auto;
   }
+
+  /* Footer normal y visible, pegado al contenido */
+  footer {
+    position: static !important;
+    margin-top: 24px !important;            /* un respiro corto sobre el footer */
+    width: 100%;
+  }
+
+  /* Si los links necesitan wrap, que no se corten */
   .footer-links {
     display: flex;
     flex-wrap: wrap;
